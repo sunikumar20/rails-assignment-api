@@ -12,7 +12,7 @@ Things you may want to cover:
 * rails db:seed
 
 # API details
-* 1. http://localhost:3000/api/v1/inbounds/sms
+* 1. /api/v1/inbounds/sms
 ```
      headers: {username: "", password: ""}
      body: {
@@ -22,7 +22,7 @@ Things you may want to cover:
         } 
       }
  ```
- * 2. http://localhost:3000/api/v1/outbounds/sms
+ * 2. /api/v1/outbounds/sms
 ```
      headers: {username: "", password: ""}
      body: {
