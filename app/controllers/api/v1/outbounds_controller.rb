@@ -21,7 +21,7 @@ class Api::V1::OutboundsController < ApplicationController
 			counter = $redis.get(key).to_i
 			counter += 1
 			if counter > 3
-				$redis.expire(key, 10.second) 
+				$redis.expire(key, 24.hours) 
 				render json: { error: "limit reached for from #{params[:sms][:from]}" }, status: 404 and return
 			end
 			$redis.set("block-api-request:from:#{params[:sms][:from]}-counter", counter)

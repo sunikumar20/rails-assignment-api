@@ -24,7 +24,7 @@ class SmsService
 
 		set_from_and_to(params)
 
-	    $redis.set(key, [@to, @from].as_json, ex: 10.second) if outbounds?
+	    $redis.set(key, [@to, @from].as_json, ex: 4.hours) if outbounds?
 
 	    unless @response_data
 			@status = :ok
